@@ -3,7 +3,6 @@
 //
 #include <iostream>
 #include "linearList.h"
-#include "arrayList.h"
 using namespace std;
 
 int main() {
