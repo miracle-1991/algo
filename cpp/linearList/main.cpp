@@ -3,6 +3,8 @@
 //
 #include <iostream>
 #include "linearList.h"
+#include <algorithm>
+#include <numeric>
 using namespace std;
 
 int main() {
@@ -19,4 +21,15 @@ int main() {
         cout << "size after erase: " << gpsListPtr->size() << endl;
     }
     delete gpsListPtr;
+
+    arrayList<int> a;
+    a.insert(0,1);
+    a.insert(0, 2);
+    a.insert(0, 3);
+    reverse(a.begin(), a.end());
+    for (arrayList<int>::iterator ite = a.begin(); ite != a.end(); ite++) {
+        cout << *ite << endl;
+    }
+    int sum = accumulate(a.begin(), a.end(), 0);
+    cout << sum << endl;
 }
